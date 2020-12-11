@@ -4,8 +4,9 @@
 A terminal app to show and execute small scripts in nodejs
 
 ## Dependencies
-You need the [NodeJS](https://nodejs.org/en/) installed and a good terminal.
-Supported terminals:
+You need the [NodeJS](https://nodejs.org/en/) installed and a good terminal.  
+  
+**Supported terminals:**  
 
 * Mac OS:
   * Terminal.app
