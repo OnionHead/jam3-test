@@ -52,4 +52,5 @@ const start = async () => {
 
 module.exports = {
   start,
+  smallDescription: 'Calculate the factorial from a number',
 };

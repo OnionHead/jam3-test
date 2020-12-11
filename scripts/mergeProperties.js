@@ -58,4 +58,5 @@ const start = async () => {
 
 module.exports = {
   start,
+  smallDescription: 'Merge a given word with object keys',
 };

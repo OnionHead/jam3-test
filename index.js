@@ -2,9 +2,11 @@ const inquirer = require('inquirer');
 
 const scripts = require('./scripts/index.js');
 
-const scriptsName = Object.keys(scripts).sort();
+const scriptNames = Object.keys(scripts).sort().map((scriptKey) => {
+  return `${scriptKey} - ${scripts[scriptKey].smallDescription}`;
+});
 
-const initialQuestio = async () => {
+const initialQuestion = async (endProcess = false) => {
   console.clear();
   console.log(`
   #       ██╗ █████╗ ███╗   ███╗██████╗     ████████╗███████╗███████╗████████╗
@@ -15,29 +17,39 @@ const initialQuestio = async () => {
   #   ╚════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝        ╚═╝   ╚══════╝╚══════╝   ╚═╝   
   `);
 
+  if(endProcess) {
+    console.log(`
+    Thanks you :)
+    `);
+    return false;
+  }
+
   const { selectedScript } = await inquirer.prompt([{
     type: 'list',
     name: 'selectedScript',
     message: 'Select what script you want to test',
-    choices: scriptsName,
+    choices: scriptNames,
   }]);
 
   console.clear();
 
-  await scripts[ selectedScript ].start()
+  const selectedScriptKey = selectedScript.split(' - ');
+
+  await scripts[ selectedScriptKey[0] ].start()
 
   const { otherScript } = await inquirer.prompt([{
     type: 'confirm',
     name: 'otherScript',
     message: 'Would you like to test another script?',
-    choices: scriptsName,
   }]);
 
   console.clear();
 
   if (otherScript) {
-    initialQuestio();
+    initialQuestion();
   }
+
+  initialQuestion(true);
 }
 
-initialQuestio();
+initialQuestion();

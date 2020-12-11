@@ -61,4 +61,5 @@ const start = async () => {
 
 module.exports = {
   start,
+  smallDescription: 'Returns the sum of the values of an array segment',
 };

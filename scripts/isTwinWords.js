@@ -67,4 +67,5 @@ const start = async () => {
 
 module.exports = {
   start,
+  smallDescription: 'Check if two words are twin',
 };
