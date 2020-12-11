@@ -1,11 +1,11 @@
-﻿const calc = require('./calc.js');
-const isTwin = require('./isTwin.js');
-const factoria = require('./factorial.js');
-const hellowProperties = require('./helloProperties.js');
+﻿const arraySum = require('./arraySum.js');
+const isTwinWords = require('./isTwinWords.js');
+const factorial = require('./factorial.js');
+const mergeProperties = require('./mergeProperties.js');
 
 module.exports = {
-  calc,
-  isTwin,
-  factoria,
-  hellowProperties,
+  arraySum,
+  isTwinWords,
+  factorial,
+  mergeProperties,
 };

@@ -1,13 +1,13 @@
 {
   "name": "jam3-test",
   "version": "1.0.0",
-  "description": "",
+  "description": "A terminal app to show and execute small scripts in nodejs",
   "main": "index.js",
   "scripts": {
-    "up": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gabriel Magalhães dos Santos",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.3.3"
