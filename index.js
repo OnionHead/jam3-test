@@ -6,7 +6,7 @@ const scriptNames = Object.keys(scripts).sort().map((scriptKey) => {
   return `${scriptKey} - ${scripts[scriptKey].smallDescription}`;
 });
 
-const initialQuestion = async (endProcess = false) => {
+const initialQuestion = async (nextQuestion = true) => {
   console.clear();
   console.log(`
   #       ██╗ █████╗ ███╗   ███╗██████╗     ████████╗███████╗███████╗████████╗
@@ -17,7 +17,7 @@ const initialQuestion = async (endProcess = false) => {
   #   ╚════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝        ╚═╝   ╚══════╝╚══════╝   ╚═╝   
   `);
 
-  if(endProcess) {
+  if(!nextQuestion) {
     console.log(`
     Thanks you :)
     `);
@@ -37,19 +37,15 @@ const initialQuestion = async (endProcess = false) => {
 
   await scripts[ selectedScriptKey[0] ].start()
 
-  const { otherScript } = await inquirer.prompt([{
+  const { reRun } = await inquirer.prompt([{
     type: 'confirm',
-    name: 'otherScript',
+    name: 'reRun',
     message: 'Would you like to test another script?',
   }]);
 
   console.clear();
 
-  if (otherScript) {
-    initialQuestion();
-  }
-
-  initialQuestion(true);
+  initialQuestion(reRun);
 }
 
 initialQuestion();
