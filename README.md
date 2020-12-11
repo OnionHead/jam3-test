@@ -37,3 +37,9 @@ they are located in scripts folder, named called **method** function
 * [Array Sum Indexes](https://github.com/OnionHead/jam3-test/blob/main/scritps/arraySum.js)
 * [Check Twin Words](https://github.com/OnionHead/jam3-test/blob/main/scritps/isTwinWords.js)
 * [Merge Properties Object](https://github.com/OnionHead/jam3-test/blob/main/scritps/mergeProperties.js)
+
+## PHP Question
+There is one script is written in PHP and, unfortunatly, I couldn't run the script on this application.
+
+But you can run the code on your PC, or check the code bellow.
+* [Merge Properties Object](https://github.com/OnionHead/jam3-test/blob/main/scritps/arraySum.php)
