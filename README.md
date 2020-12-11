@@ -8,17 +8,17 @@ You need the [NodeJS](https://nodejs.org/en/) installed and a good terminal.
 Supported terminals:
 
 * Mac OS:
-Terminal.app
-iTerm
+  * Terminal.app
+  * iTerm
 
 * Windows:
-cmd.exe
-Powershell
-Cygwin
+  * cmd.exe
+  * Powershell
+  * Cygwin
 
 * Linux (Ubuntu, openSUSE, Arch Linux, etc):
-gnome-terminal (Terminal GNOME)
-konsole
+  * gnome-terminal (Terminal GNOME)
+  * konsole
 
 ## Installation
 Clone this repository, then install the NodeJS dependencies with
